@@ -1,22 +1,9 @@
-# frozen_string_literal: true
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
 
-begin
-  require "gemsmith/rake/setup"
-  # require "bundler/audit/task"
-  # require "git/cop/rake/setup"
-  require "rspec/core/rake_task"
-  # require "reek/rake/task"
-  require "rubocop/rake_task"
+RSpec::Core::RakeTask.new(:spec)
 
-  # Bundler::Audit::Task.new
-  RSpec::Core::RakeTask.new(:spec)
-  # Reek::Rake::Task.new
-  RuboCop::RakeTask.new
-rescue LoadError => error
-  puts error.message
+task :default do
+  system('bundle exec rspec')
+  system('bundle exec rubocop')
 end
-
-desc "Run code quality checks"
-task code_quality: %i[rubocop]
-
-task default: %i[code_quality spec]
