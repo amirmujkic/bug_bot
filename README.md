@@ -2,34 +2,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/bug_bot.svg)](http://badge.fury.io/rb/bug_bot)
 
-<!-- Tocer[start]: Auto-generated, don't remove. -->
-
-## Table of Contents
-
-  - [Features](#features)
-  - [Screencasts](#screencasts)
-  - [Requirements](#requirements)
-  - [Setup](#setup)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Versioning](#versioning)
-  - [Code of Conduct](#code-of-conduct)
-  - [Contributions](#contributions)
-  - [License](#license)
-  - [History](#history)
-  - [Credits](#credits)
-
-<!-- Tocer[finish]: Auto-generated, don't remove. -->
-
 ## Features
 
-## Screencasts
-
-## Requirements
-
-1. [Ruby 2.5.0](https://www.ruby-lang.org)
-
-## Setup
+## Getting started
 
 To install, run:
 
@@ -37,7 +12,7 @@ To install, run:
 
 Add the following to your Gemfile:
 
-    gem "bug_bot"
+    gem "bug_bot", '~> 0.1.0'
 
 ## Usage
 
@@ -45,7 +20,7 @@ Add the following to your Gemfile:
 
 To test, run:
 
-    bundle exec rake
+    bundle exec rspec
 
 ## Versioning
 
@@ -67,9 +42,3 @@ Read [LICENSE](LICENSE.md) for details.
 ## History
 
 Read [CHANGES](CHANGES.md) for details.
-Built with [Gemsmith](https://github.com/bkuhlmann/gemsmith).
-
-## Credits
-
-Developed by [Amir Mujkic]() at
-[]().
