@@ -2,7 +2,17 @@
 
 [![Gem Version](https://badge.fury.io/rb/bug_bot.svg)](http://badge.fury.io/rb/bug_bot)
 
+BugBot is a simple error monitoring gem that abstracts multiple reporting tools in one.
+
 ## Features
+- Easily switch error monitoring provider by changing config only
+- Supported adapters
+  - [Airbrake](https://github.com/airbrake/airbrake-ruby)
+  - [Bugsnag](https://github.com/bugsnag/bugsnag-ruby)
+- Upcoming features
+  - Support for custom payloads and metadata
+  - Aditional adapters for [Sentry](https://github.com/getsentry/raven-ruby) and [Rollbar](https://github.com/rollbar/rollbar-gem)
+  - Advanced configuration
 
 ## Getting started
 
@@ -14,7 +24,29 @@ Add the following to your Gemfile:
 
     gem "bug_bot", '~> 0.1.0'
 
+After you've added the `bug_bot` gem, please install one of the gems for the monitoring platform you want to use.
+You can use one of the following instalation guides to do so:
+
+ - [Airbrake](https://github.com/airbrake/airbrake-ruby#installation)
+ - [Bugsnag](https://docs.bugsnag.com/platforms/ruby/rails/#installation)
+
 ## Usage
+
+### Reporting exceptions
+
+After installing one of the supported gems, reporting of unhandeled exceptions should happen automatically and be visible for you in their respectiv monitoring dashboard.
+
+Report handleded expcetions of errors can be done with:
+
+```ruby
+begin
+  raise 'Robots are taking over!'
+rescue => exception
+  BugBot.notify(exception)
+end
+```
+### Changing the provider
+Changing of the monitoring provider should be easily acheived just by installing/configuring the other gem.
 
 ## Tests
 
