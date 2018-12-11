@@ -25,6 +25,10 @@ module BugBot
 
   alias adapter= use_adapter
 
+  def notify(exception, options = {})
+    adapter.notify(exception, options)
+  end
+
   def default_adapter
     return :airbrake if defined?(::Airbrake)
     return :bugsnag if defined?(::Bugsnag)
@@ -37,13 +41,11 @@ module BugBot
     # TODO: Return default adapter here
   end
 
+  private
+
   def load_adapter(name)
     require "bug_bot/adapters/#{name.downcase}"
 
     BugBot::Adapters.const_get(name.capitalize)
-  end
-
-  def notify(exception, &block)
-    adapter.notify(exception, &block)
   end
 end
