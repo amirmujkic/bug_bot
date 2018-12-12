@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.platform = Gem::Platform::RUBY
   spec.authors = ['Amir Mujkic']
   spec.email = ['amirmujk@gmail.com']
-  spec.homepage = ''
-  spec.summary = ''
+  spec.homepage = 'https://github.com/amirmujkic/bug_bot'
+  spec.summary = 'A simple gem that abstracts error monitoring'
   spec.license = 'MIT'
   spec.metadata['changelog_uri'] = 'https://github.com/amirmujkic/bug_bot/blob/master/CHANGELOG.md'
 
