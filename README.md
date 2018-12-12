@@ -25,7 +25,7 @@ Add the following to your Gemfile:
     gem "bug_bot", '~> 0.1.0'
 
 After you've added the `bug_bot` gem, please install one of the gems for the monitoring platform you want to use.
-You can use one of the following instalation guides to do so:
+To accomplish that, you can use one of the following installation guides:
 
  - [Airbrake](https://github.com/airbrake/airbrake-ruby#installation)
  - [Bugsnag](https://docs.bugsnag.com/platforms/ruby/rails/#installation)
