@@ -10,9 +10,9 @@ BugBot is a simple error monitoring gem that abstracts multiple reporting tools 
   - [Airbrake](https://github.com/airbrake/airbrake-ruby)
   - [Bugsnag](https://github.com/bugsnag/bugsnag-ruby)
 - Upcoming features
-  - Support for custom payloads and metadata
   - Aditional adapters for [Sentry](https://github.com/getsentry/raven-ruby) and [Rollbar](https://github.com/rollbar/rollbar-gem)
   - Advanced configuration
+  - Support for common advanced features
 
 ## Getting started
 
@@ -22,7 +22,7 @@ To install, run:
 
 Add the following to your Gemfile:
 
-    gem "bug_bot", '~> 0.1.0'
+    gem "bug_bot", '~> 0.2.0'
 
 After you've added the `bug_bot` gem, please install one of the gems for the monitoring platform you want to use.
 To accomplish that, you can use one of the following installation guides:
@@ -34,9 +34,9 @@ To accomplish that, you can use one of the following installation guides:
 
 ### Reporting exceptions
 
-After installing one of the supported gems, reporting of unhandled exceptions should happen automatically and be visible for you in their respective monitoring dashboard.
+After installing one of the supported gems, reporting of unhandled exceptions should happen automatically and be visible in their respective monitoring dashboard.
 
-Report handled exceptions of errors can be done with:
+Reporting of handled exceptions can be done with:
 
 ```ruby
 begin
@@ -47,7 +47,7 @@ end
 ```
 
 #### Custom payload
-If you need to add custom payload to the error report you can do this by providing a an options hash.
+If you need to add custom payload to the error report you can do this by providing an options hash.
 
 ```ruby
 begin
