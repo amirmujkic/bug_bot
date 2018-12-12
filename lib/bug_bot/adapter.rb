@@ -4,8 +4,8 @@ module BugBot
   class Adapter
     include Singleton
     class << self
-      def notify(exception, &block)
-        instance.notify(exception, &block)
+      def notify(exception, options = {})
+        instance.notify(exception, options)
       end
     end
   end

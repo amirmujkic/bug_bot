@@ -4,8 +4,10 @@ require 'bug_bot/adapter'
 module BugBot
   module Adapters
     class Bugsnag < Adapter
-      def notify(exception, &block)
-        ::Bugsnag.notify(exception, &block)
+      def notify(exception, options = {})
+        ::Bugsnag.notify(exception) do |report|
+          report.meta_data = options
+        end
       end
     end
   end

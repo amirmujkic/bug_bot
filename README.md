@@ -34,9 +34,9 @@ You can use one of the following instalation guides to do so:
 
 ### Reporting exceptions
 
-After installing one of the supported gems, reporting of unhandeled exceptions should happen automatically and be visible for you in their respectiv monitoring dashboard.
+After installing one of the supported gems, reporting of unhandled exceptions should happen automatically and be visible for you in their respective monitoring dashboard.
 
-Report handleded expcetions of errors can be done with:
+Report handled exceptions of errors can be done with:
 
 ```ruby
 begin
@@ -45,8 +45,24 @@ rescue => exception
   BugBot.notify(exception)
 end
 ```
+
+#### Custom payload
+If you need to add custom payload to the error report you can do this by providing a an options hash.
+
+```ruby
+begin
+  raise 'Robots are taking over!'
+rescue => exception
+  BugBot.notify(exception, {
+    foo: {
+      bar: 'baz'
+    }
+  })
+end
+```
+
 ### Changing the provider
-Changing of the monitoring provider should be easily acheived just by installing/configuring the other gem.
+Changing of the monitoring provider should be easily achieved just by installing/configuring the other gem.
 
 ## Tests
 

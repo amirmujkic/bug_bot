@@ -6,15 +6,20 @@ shared_examples_for 'an adapter' do |adapter, gem_class|
       allow(gem_class).to receive(:notify)
     end
 
-    it 'forwards the error report' do
-      block = proc {}
-      expect(adapter).to receive(:notify).with('ex', &block)
-      adapter.notify('ex', &block)
+    it "uses the #{adapter} gem" do
+      expect(gem_class).to receive(:notify)
+      BugBot.adapter.notify('ex')
     end
 
-    it "uses the #{gem_class} gem" do
-      expect(gem_class).to receive(:notify)
+    it 'sends the error report' do
+      expect(adapter).to receive(:notify).with('ex')
       adapter.notify('ex')
+    end
+
+    it 'supports sending custom payloads' do
+      options = { foo: 'bar' }
+      expect(adapter).to receive(:notify).with('ex', options)
+      adapter.notify('ex', options)
     end
   end
 end
