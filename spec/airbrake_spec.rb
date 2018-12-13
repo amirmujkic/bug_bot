@@ -1,5 +1,5 @@
-require 'bug_bot/adapters/airbrake'
+require 'multi_bug/adapters/airbrake'
 
-RSpec.describe BugBot::Adapters::Airbrake do
+RSpec.describe MultiBug::Adapters::Airbrake do
   it_behaves_like 'an adapter', described_class, ::Airbrake
 end

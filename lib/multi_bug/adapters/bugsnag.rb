@@ -1,7 +1,7 @@
 require 'bugsnag'
-require 'bug_bot/adapter'
+require 'multi_bug/adapter'
 
-module BugBot
+module MultiBug
   module Adapters
     class Bugsnag < Adapter
       def notify(exception, options = {})

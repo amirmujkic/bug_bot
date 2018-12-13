@@ -1,16 +1,16 @@
 $LOAD_PATH.append File.expand_path('lib', __dir__)
-require 'bug_bot/identity'
+require 'multi_bug/identity'
 
 Gem::Specification.new do |spec|
-  spec.name = BugBot::Identity.name
-  spec.version = BugBot::Identity.version
+  spec.name = MultiBug::Identity.name
+  spec.version = MultiBug::Identity.version
   spec.platform = Gem::Platform::RUBY
   spec.authors = ['Amir Mujkic']
   spec.email = ['amirmujk@gmail.com']
-  spec.homepage = 'https://github.com/amirmujkic/bug_bot'
+  spec.homepage = 'https://github.com/amirmujkic/multi_bug'
   spec.summary = 'A simple gem that abstracts error monitoring'
   spec.license = 'MIT'
-  spec.metadata['changelog_uri'] = 'https://github.com/amirmujkic/bug_bot/blob/master/CHANGELOG.md'
+  spec.metadata['changelog_uri'] = 'https://github.com/amirmujkic/multi_bug/blob/master/CHANGELOG.md'
 
   spec.files         = Dir['lib/**/*', 'Rakefile', 'README.md']
   spec.bindir        = 'exe'

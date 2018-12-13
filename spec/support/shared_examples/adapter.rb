@@ -1,5 +1,5 @@
 shared_examples_for 'an adapter' do |adapter, gem_class|
-  before { BugBot.use_adapter adapter }
+  before { MultiBug.use_adapter adapter }
 
   describe '.notify' do
     before do
@@ -8,7 +8,7 @@ shared_examples_for 'an adapter' do |adapter, gem_class|
 
     it "uses the #{adapter} gem" do
       expect(gem_class).to receive(:notify)
-      BugBot.adapter.notify('ex')
+      MultiBug.adapter.notify('ex')
     end
 
     it 'sends the error report' do
