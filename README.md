@@ -1,6 +1,6 @@
 # MultiBug
 
-[![Gem Version](https://badge.fury.io/rb/multi_bug.svg)](http://badge.fury.io/rb/multi_bug) [![Build Status](https://travis-ci.org/amirmujkic/bug_bot.svg?branch=master)](https://travis-ci.org/amirmujkic/bug_bot)
+[![Gem Version](https://badge.fury.io/rb/multi_bug.svg)](http://badge.fury.io/rb/multi_bug) [![Build Status](https://travis-ci.org/amirmujkic/multi_bug.svg?branch=master)](https://travis-ci.org/amirmujkic/bug_bot)
 
 MultiBug is a simple error monitoring gem that abstracts multiple reporting tools in one.
 
@@ -22,7 +22,7 @@ To install, run:
 
 Add the following to your Gemfile:
 
-    gem "multi_bug", '~> 0.2.1'
+    gem "multi_bug", '~> 0.2.2'
 
 After you've added the `multi_bug` gem, please install one of the gems for the monitoring platform you want to use.
 To accomplish that, you can use one of the following installation guides:
