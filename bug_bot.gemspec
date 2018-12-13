@@ -12,8 +12,6 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
   spec.metadata['changelog_uri'] = 'https://github.com/amirmujkic/bug_bot/blob/master/CHANGELOG.md'
 
-  spec.required_ruby_version = '~> 2.5.3'
-
   spec.files         = Dir['lib/**/*', 'Rakefile', 'README.md']
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
