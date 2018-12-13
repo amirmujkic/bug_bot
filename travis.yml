@@ -1,0 +1,13 @@
+branches:
+  - master
+
+language: ruby
+
+rvm:
+  - 2.5.3
+
+before_install: gem install bundler -v 1.17.2
+
+script:
+  - bundle exec rspec
+  - bundle exec rubocop
