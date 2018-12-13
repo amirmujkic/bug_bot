@@ -5,7 +5,7 @@ Bundler.require(:default, :development, :test)
 require 'simplecov'
 
 SimpleCov.start do
-  minimum_coverage 99.99
+  minimum_coverage 97
 end
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
