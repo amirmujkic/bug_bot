@@ -1,12 +1,12 @@
-RSpec.describe BugBot do
+RSpec.describe MultiBug do
   describe '.use_adapter' do
-    before { BugBot.use_adapter(adapter) }
+    before { MultiBug.use_adapter(adapter) }
 
     context 'when using a symbol or a string' do
       let(:adapter) { :airbrake }
 
       it 'loads the provided adapter' do
-        expect(described_class.adapter).to eq(BugBot::Adapters::Airbrake)
+        expect(described_class.adapter).to eq(MultiBug::Adapters::Airbrake)
       end
     end
 

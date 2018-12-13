@@ -1,6 +1,6 @@
 require 'singleton'
 
-module BugBot
+module MultiBug
   class Adapter
     include Singleton
     class << self

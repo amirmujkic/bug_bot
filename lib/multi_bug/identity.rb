@@ -1,18 +1,18 @@
-module BugBot
+module MultiBug
   # Gem identity information.
   module Identity
     module_function
 
     def name
-      'bug_bot'
+      'multi_bug'
     end
 
     def label
-      'BugBot'
+      'MultiBug'
     end
 
     def version
-      '0.2.0'
+      '0.2.1'
     end
 
     def version_label

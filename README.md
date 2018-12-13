@@ -1,8 +1,8 @@
-# BugBot
+# MultiBug
 
-[![Gem Version](https://badge.fury.io/rb/bug_bot.svg)](http://badge.fury.io/rb/bug_bot)
+[![Gem Version](https://badge.fury.io/rb/multi_bug.svg)](http://badge.fury.io/rb/multi_bug)
 
-BugBot is a simple error monitoring gem that abstracts multiple reporting tools in one.
+MultiBug is a simple error monitoring gem that abstracts multiple reporting tools in one.
 
 ## Features
 - Easily switch error monitoring provider by changing config only
@@ -18,13 +18,13 @@ BugBot is a simple error monitoring gem that abstracts multiple reporting tools 
 
 To install, run:
 
-    gem install bug_bot
+    gem install multi_bug
 
 Add the following to your Gemfile:
 
-    gem "bug_bot", '~> 0.2.0'
+    gem "multi_bug", '~> 0.2.1'
 
-After you've added the `bug_bot` gem, please install one of the gems for the monitoring platform you want to use.
+After you've added the `multi_bug` gem, please install one of the gems for the monitoring platform you want to use.
 To accomplish that, you can use one of the following installation guides:
 
  - [Airbrake](https://github.com/airbrake/airbrake-ruby#installation)
@@ -42,7 +42,7 @@ Reporting of handled exceptions can be done with:
 begin
   raise 'Robots are taking over!'
 rescue => exception
-  BugBot.notify(exception)
+  MultiBug.notify(exception)
 end
 ```
 
@@ -53,7 +53,7 @@ If you need to add custom payload to the error report you can do this by providi
 begin
   raise 'Robots are taking over!'
 rescue => exception
-  BugBot.notify(exception, {
+  MultiBug.notify(exception, {
     foo: {
       bar: 'baz'
     }

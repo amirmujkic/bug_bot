@@ -1,6 +1,6 @@
-require 'bug_bot/identity'
+require 'multi_bug/identity'
 
-module BugBot
+module MultiBug
   extend self
 
   SUPPORTED_ADAPTERS = { airbrake: 'airbrake-ruby', bugsnag: 'bugsnag' }.freeze
@@ -44,8 +44,8 @@ module BugBot
   private
 
   def load_adapter(name)
-    require "bug_bot/adapters/#{name.downcase}"
+    require "multi_bug/adapters/#{name.downcase}"
 
-    BugBot::Adapters.const_get(name.capitalize)
+    MultiBug::Adapters.const_get(name.capitalize)
   end
 end

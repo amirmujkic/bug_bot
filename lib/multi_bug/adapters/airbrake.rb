@@ -1,7 +1,7 @@
 require 'airbrake-ruby'
-require 'bug_bot/adapter'
+require 'multi_bug/adapter'
 
-module BugBot
+module MultiBug
   module Adapters
     class Airbrake < Adapter
       def notify(exception, options = {})
