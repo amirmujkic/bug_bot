@@ -1,8 +1,12 @@
-# MultiBug
-
-[![Gem Version](https://badge.fury.io/rb/multi_bug.svg)](http://badge.fury.io/rb/multi_bug) [![Build Status](https://travis-ci.org/amirmujkic/multi_bug.svg?branch=master)](https://travis-ci.org/amirmujkic/bug_bot)
-
-MultiBug is a simple error monitoring gem that abstracts multiple reporting tools in one.
+<p align="center">
+  <h2 align="center">MultiBug</h2>
+  <p align="center">Error reporting via multiple platforms</p>
+  <p align="center">
+    <a href="http://badge.fury.io/rb/multi_bug)"><img src="https://badge.fury.io/rb/multi_bug.svg"/></a>
+    <a href="https://travis-ci.org/amirmujkic/bug_bot)"><img src="https://travis-ci.org/amirmujkic/multi_bug.svg?branch=master"/></a>
+  </p>
+  <br>
+</p>
 
 ## Features
 - Easily switch error monitoring provider by changing config only
