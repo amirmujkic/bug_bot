@@ -8,6 +8,21 @@
   <br>
 </p>
 
+<p align="center">
+  <h1 align="center">MultiBug</h1>
+  <p align="center">Error reporting via multiple platforms.</p>
+  <p align="center">
+    <a href="https://travis-ci.org/amirmujkic/bug_bot">
+      <img alt="Build Status" src="https://travis-ci.org/amirmujkic/multi_bug.svg?branch=master">
+    </a>
+    <a href="http://badge.fury.io/rb/multi_bug">
+      <img alt="Release" src="https://badge.fury.io/rb/multi_bug.svg">
+    </a>
+  </p>
+</p>
+
+---
+
 ## Features
 - Easily switch error monitoring provider by changing config only
 - Supported adapters
